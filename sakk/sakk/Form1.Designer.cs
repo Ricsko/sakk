@@ -33,16 +33,29 @@ namespace sakk
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.jatekos1TBOX = new System.Windows.Forms.TextBox();
             this.jatekos2TBOX = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.startBTN = new System.Windows.Forms.Button();
             this.babuk = new System.Windows.Forms.ImageList(this.components);
+            this.title = new System.Windows.Forms.PictureBox();
+            this.inditas = new System.Windows.Forms.PictureBox();
+            this.jatekos1 = new System.Windows.Forms.PictureBox();
+            this.jatekos2 = new System.Windows.Forms.PictureBox();
+            this.szabalyok = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.játékToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.újraindításToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kep = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.title)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inditas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jatekos1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jatekos2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.szabalyok)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kep)).BeginInit();
             this.SuspendLayout();
             // 
             // jatekos1TBOX
             // 
             this.jatekos1TBOX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.jatekos1TBOX.Location = new System.Drawing.Point(198, 94);
+            this.jatekos1TBOX.Location = new System.Drawing.Point(165, 216);
             this.jatekos1TBOX.Name = "jatekos1TBOX";
             this.jatekos1TBOX.Size = new System.Drawing.Size(127, 26);
             this.jatekos1TBOX.TabIndex = 0;
@@ -50,41 +63,10 @@ namespace sakk
             // jatekos2TBOX
             // 
             this.jatekos2TBOX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.jatekos2TBOX.Location = new System.Drawing.Point(198, 140);
+            this.jatekos2TBOX.Location = new System.Drawing.Point(165, 268);
             this.jatekos2TBOX.Name = "jatekos2TBOX";
             this.jatekos2TBOX.Size = new System.Drawing.Size(127, 26);
             this.jatekos2TBOX.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(94, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Player1:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(94, 143);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Player2:";
-            // 
-            // startBTN
-            // 
-            this.startBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.startBTN.Location = new System.Drawing.Point(355, 295);
-            this.startBTN.Name = "startBTN";
-            this.startBTN.Size = new System.Drawing.Size(143, 76);
-            this.startBTN.TabIndex = 5;
-            this.startBTN.Text = "Játék indítása";
-            this.startBTN.UseVisualStyleBackColor = true;
-            this.startBTN.Click += new System.EventHandler(this.startBTN_Click);
             // 
             // babuk
             // 
@@ -103,18 +85,124 @@ namespace sakk
             this.babuk.Images.SetKeyName(10, "fekete_lo.png");
             this.babuk.Images.SetKeyName(11, "fekete_paraszt.png");
             // 
+            // title
+            // 
+            this.title.BackColor = System.Drawing.Color.Transparent;
+            this.title.BackgroundImage = global::sakk.Properties.Resources.TITLE;
+            this.title.Location = new System.Drawing.Point(268, 36);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(300, 100);
+            this.title.TabIndex = 6;
+            this.title.TabStop = false;
+            // 
+            // inditas
+            // 
+            this.inditas.BackColor = System.Drawing.Color.Transparent;
+            this.inditas.BackgroundImage = global::sakk.Properties.Resources.inditas;
+            this.inditas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.inditas.Location = new System.Drawing.Point(604, 377);
+            this.inditas.Name = "inditas";
+            this.inditas.Size = new System.Drawing.Size(184, 61);
+            this.inditas.TabIndex = 7;
+            this.inditas.TabStop = false;
+            this.inditas.Click += new System.EventHandler(this.inditas_Click);
+            // 
+            // jatekos1
+            // 
+            this.jatekos1.BackColor = System.Drawing.Color.Transparent;
+            this.jatekos1.BackgroundImage = global::sakk.Properties.Resources.JATEKOS1;
+            this.jatekos1.Location = new System.Drawing.Point(12, 201);
+            this.jatekos1.Name = "jatekos1";
+            this.jatekos1.Size = new System.Drawing.Size(147, 50);
+            this.jatekos1.TabIndex = 8;
+            this.jatekos1.TabStop = false;
+            // 
+            // jatekos2
+            // 
+            this.jatekos2.BackColor = System.Drawing.Color.Transparent;
+            this.jatekos2.BackgroundImage = global::sakk.Properties.Resources.JATEKOS2;
+            this.jatekos2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.jatekos2.Location = new System.Drawing.Point(12, 257);
+            this.jatekos2.Name = "jatekos2";
+            this.jatekos2.Size = new System.Drawing.Size(147, 50);
+            this.jatekos2.TabIndex = 9;
+            this.jatekos2.TabStop = false;
+            // 
+            // szabalyok
+            // 
+            this.szabalyok.BackColor = System.Drawing.Color.Transparent;
+            this.szabalyok.BackgroundImage = global::sakk.Properties.Resources.SZABALYOK;
+            this.szabalyok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.szabalyok.Location = new System.Drawing.Point(404, 377);
+            this.szabalyok.Name = "szabalyok";
+            this.szabalyok.Size = new System.Drawing.Size(184, 61);
+            this.szabalyok.TabIndex = 10;
+            this.szabalyok.TabStop = false;
+            this.szabalyok.Click += new System.EventHandler(this.szabalyok_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.játékToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // játékToolStripMenuItem
+            // 
+            this.játékToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.újraindításToolStripMenuItem});
+            this.játékToolStripMenuItem.Name = "játékToolStripMenuItem";
+            this.játékToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.játékToolStripMenuItem.Text = "Játék";
+            // 
+            // újraindításToolStripMenuItem
+            // 
+            this.újraindításToolStripMenuItem.Name = "újraindításToolStripMenuItem";
+            this.újraindításToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.újraindításToolStripMenuItem.Text = "Újraindítás";
+            this.újraindításToolStripMenuItem.Click += new System.EventHandler(this.újraindításToolStripMenuItem_Click);
+            // 
+            // kep
+            // 
+            this.kep.BackColor = System.Drawing.Color.Transparent;
+            this.kep.BackgroundImage = global::sakk.Properties.Resources.nemtom;
+            this.kep.Location = new System.Drawing.Point(442, 160);
+            this.kep.Name = "kep";
+            this.kep.Size = new System.Drawing.Size(300, 200);
+            this.kep.TabIndex = 12;
+            this.kep.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::sakk.Properties.Resources.hatter;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.startBTN);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.kep);
+            this.Controls.Add(this.szabalyok);
+            this.Controls.Add(this.jatekos2);
+            this.Controls.Add(this.jatekos1);
+            this.Controls.Add(this.inditas);
+            this.Controls.Add(this.title);
             this.Controls.Add(this.jatekos2TBOX);
             this.Controls.Add(this.jatekos1TBOX);
+            this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sakk";
+            ((System.ComponentModel.ISupportInitialize)(this.title)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inditas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jatekos1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jatekos2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.szabalyok)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,10 +212,16 @@ namespace sakk
 
         private System.Windows.Forms.TextBox jatekos1TBOX;
         private System.Windows.Forms.TextBox jatekos2TBOX;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button startBTN;
         private System.Windows.Forms.ImageList babuk;
+        private System.Windows.Forms.PictureBox title;
+        private System.Windows.Forms.PictureBox inditas;
+        private System.Windows.Forms.PictureBox jatekos1;
+        private System.Windows.Forms.PictureBox jatekos2;
+        private System.Windows.Forms.PictureBox szabalyok;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem játékToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem újraindításToolStripMenuItem;
+        private System.Windows.Forms.PictureBox kep;
     }
 }
 

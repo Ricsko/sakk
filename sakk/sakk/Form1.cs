@@ -16,17 +16,23 @@ namespace sakk
     {
 
         static PictureBox[,] jatekter = new PictureBox[8, 8];
-        static PictureBox aktBabu;
+        static PictureBox aktBabu = new PictureBox();
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void startBTN_Click(object sender, EventArgs e)
+        private void inditas_Click(object sender, EventArgs e)
         {
             nevellenorzes();
-            Size = new Size(1920, 1080);
+            gofullscreen();
+        }
+
+        private void gofullscreen()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
         }
 
         private void nevellenorzes()
@@ -49,47 +55,68 @@ namespace sakk
 
         private void jatektergeneralas()
         {
-            int x = this.ClientSize.Width / 2;
-            int y = this.ClientSize.Height / 2;
+            int x = 0;
+            int y = 0;
+            PictureBox pictureBox1 = new PictureBox();
+            pictureBox1.Size = new Size(800, 800);
+            pictureBox1.BackColor = Color.Black;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(this.ClientSize.Width / 2 - pictureBox1.Size.Width / 2, -100);
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.BringToFront();
+            this.Controls.Add(pictureBox1);
 
+            
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
                 {
                     PictureBox palya = new PictureBox();
                     palya.Size = new Size(100, 100);
-                    palya.Location = new Point(x + 6, y);
+                    palya.Location = new Point(x , y);
                     palya.Name = $"{i}_{j}";
                    // palya.MouseClick += new MouseEventHandler(mozgatasClick);
                     if ((i + j) % 2 == 0)
                     {
-                        palya.BackColor = Color.FromArgb(255, 216, 176);
+                        palya.BackColor = Color.Purple;
                     }
                     else
                     {
-                        palya.BackColor = Color.FromArgb(69, 40, 36);
-                        palya.Enabled = false;
+                        palya.BackColor = Color.Pink;
                     }
-                    this.Controls.Add(palya);
+                    pictureBox1.Controls.Add(palya);
                     jatekter[i, j] = palya;
 
                     x += 100;
                 }
 
-                x = this.ClientSize.Width / 2;
+                x = 0;
                 y += 100;
             }
-            aktBabu = new PictureBox();
+            
 
         }
 
         private void gombeltuntetes()
         {
-            label1.Visible = false;
-            label2.Visible = false;
+            jatekos1.Visible = false;
+            jatekos2.Visible = false;
             jatekos1TBOX.Visible = false;
             jatekos2TBOX.Visible = false;
-            startBTN.Visible = false;
+            inditas.Visible = false;
+            title.Visible = false;
+            szabalyok.Visible = false;
+            kep.Visible = false;
+        }
+
+        private void szabalyok_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://hu.wikipedia.org/wiki/Sakk");
+        }
+
+        private void újraindításToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }
