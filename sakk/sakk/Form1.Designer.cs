@@ -29,11 +29,14 @@ namespace sakk
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.jatekos1TBOX = new System.Windows.Forms.TextBox();
             this.jatekos2TBOX = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.startBTN = new System.Windows.Forms.Button();
+            this.babuk = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // jatekos1TBOX
@@ -83,6 +86,23 @@ namespace sakk
             this.startBTN.UseVisualStyleBackColor = true;
             this.startBTN.Click += new System.EventHandler(this.startBTN_Click);
             // 
+            // babuk
+            // 
+            this.babuk.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("babuk.ImageStream")));
+            this.babuk.TransparentColor = System.Drawing.Color.Transparent;
+            this.babuk.Images.SetKeyName(0, "feher_bastya.png");
+            this.babuk.Images.SetKeyName(1, "feher_futo.png");
+            this.babuk.Images.SetKeyName(2, "feher_kiraly.png");
+            this.babuk.Images.SetKeyName(3, "feher_kiralyno.png");
+            this.babuk.Images.SetKeyName(4, "feher_lo.png");
+            this.babuk.Images.SetKeyName(5, "feher_paraszt.png");
+            this.babuk.Images.SetKeyName(6, "fekete_bastya.png");
+            this.babuk.Images.SetKeyName(7, "fekete_futo.png");
+            this.babuk.Images.SetKeyName(8, "fekete_kiraly.png");
+            this.babuk.Images.SetKeyName(9, "fekete_kiralyno.png");
+            this.babuk.Images.SetKeyName(10, "fekete_lo.png");
+            this.babuk.Images.SetKeyName(11, "fekete_paraszt.png");
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +127,7 @@ namespace sakk
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button startBTN;
+        private System.Windows.Forms.ImageList babuk;
     }
 }
 
