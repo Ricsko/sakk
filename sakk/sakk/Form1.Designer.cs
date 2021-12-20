@@ -73,16 +73,16 @@ namespace sakk
             this.babuk.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("babuk.ImageStream")));
             this.babuk.TransparentColor = System.Drawing.Color.Transparent;
             this.babuk.Images.SetKeyName(0, "feher_bastya.png");
-            this.babuk.Images.SetKeyName(1, "feher_futo.png");
-            this.babuk.Images.SetKeyName(2, "feher_kiraly.png");
-            this.babuk.Images.SetKeyName(3, "feher_kiralyno.png");
-            this.babuk.Images.SetKeyName(4, "feher_lo.png");
+            this.babuk.Images.SetKeyName(1, "feher_lo.png");
+            this.babuk.Images.SetKeyName(2, "feher_futo.png");
+            this.babuk.Images.SetKeyName(3, "feher_kiraly.png");
+            this.babuk.Images.SetKeyName(4, "feher_kiralyno.png");
             this.babuk.Images.SetKeyName(5, "feher_paraszt.png");
             this.babuk.Images.SetKeyName(6, "fekete_bastya.png");
-            this.babuk.Images.SetKeyName(7, "fekete_futo.png");
-            this.babuk.Images.SetKeyName(8, "fekete_kiraly.png");
-            this.babuk.Images.SetKeyName(9, "fekete_kiralyno.png");
-            this.babuk.Images.SetKeyName(10, "fekete_lo.png");
+            this.babuk.Images.SetKeyName(7, "fekete_lo.png");
+            this.babuk.Images.SetKeyName(8, "fekete_futo.png");
+            this.babuk.Images.SetKeyName(9, "fekete_kiraly.png");
+            this.babuk.Images.SetKeyName(10, "fekete_kiralyno.png");
             this.babuk.Images.SetKeyName(11, "fekete_paraszt.png");
             // 
             // title

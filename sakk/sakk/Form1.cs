@@ -37,17 +37,17 @@ namespace sakk
 
         private void nevellenorzes()
         {
-           /* string nev1 = jatekos1TBOX.Text;
-            string nev2 = jatekos2TBOX.Text;
+            /* string nev1 = jatekos1TBOX.Text;
+             string nev2 = jatekos2TBOX.Text;
 
-            if(nev1 == "" || nev2 == "")
-            {
-                MessageBox.Show("Adja meg a játékosok nevét!");
-            }
-            else
-            {
-               
-            }*/
+             if(nev1 == "" || nev2 == "")
+             {
+                 MessageBox.Show("Adja meg a játékosok nevét!");
+             }
+             else
+             {
+
+             }*/
 
             gombeltuntetes();
             jatektergeneralas();
@@ -61,21 +61,22 @@ namespace sakk
             pictureBox1.Size = new Size(800, 800);
             pictureBox1.BackColor = Color.Black;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(this.ClientSize.Width / 2 - pictureBox1.Size.Width / 2, -100);
+            pictureBox1.Location = new Point(this.ClientSize.Width / 2 - pictureBox1.Size.Width / 2, this.ClientSize.Height / 2 - pictureBox1.Size.Height / 2);
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.BringToFront();
             this.Controls.Add(pictureBox1);
 
-            
+
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
                 {
                     PictureBox palya = new PictureBox();
                     palya.Size = new Size(100, 100);
-                    palya.Location = new Point(x , y);
+                    palya.Location = new Point(x, y);
                     palya.Name = $"{i}_{j}";
-                   // palya.MouseClick += new MouseEventHandler(mozgatasClick);
+                    //palya.BackgroundImageLayout = ImageLayout.Zoom;
+                    palya.MouseClick += new MouseEventHandler(mozgatasClick);
                     if ((i + j) % 2 == 0)
                     {
                         palya.BackColor = Color.Purple;
@@ -93,10 +94,33 @@ namespace sakk
                 x = 0;
                 y += 100;
             }
-            
 
+            babuGen();
         }
 
+        private void babuGen()
+        {
+            jatekter[0, 0].BackgroundImage = babuk.Images[0];
+            jatekter[0, 0].Name += "_feher_bastya";
+            jatekter[0, 7].BackgroundImage = babuk.Images[0];
+            jatekter[0, 7].Name += "_feher_bastya";
+
+            jatekter[0, 1].BackgroundImage = babuk.Images[1];
+            jatekter[0, 1].Name += "_feher_huszar";
+            jatekter[0, 6].BackgroundImage = babuk.Images[1];
+            jatekter[0, 6].Name += "_feher_huszar";
+
+            jatekter[0, 2].BackgroundImage = babuk.Images[2];
+            jatekter[0, 2].Name += "_feher_futoa";
+            jatekter[0, 5].BackgroundImage = babuk.Images[2];
+            jatekter[0, 5].Name += "_feher_futo";
+        }
+
+        private void mozgatasClick(object sender, EventArgs e)
+        {
+            PictureBox klikkelt = sender as PictureBox;
+            MessageBox.Show(klikkelt.Name);
+        }
         private void gombeltuntetes()
         {
             jatekos1.Visible = false;
