@@ -100,6 +100,8 @@ namespace sakk
 
         private void babuGen()
         {
+            //FEHÉR BÁBÚK
+
             jatekter[0, 0].BackgroundImage = babuk.Images[0];
             jatekter[0, 0].Name += "_feher_bastya";
             jatekter[0, 7].BackgroundImage = babuk.Images[0];
@@ -111,9 +113,52 @@ namespace sakk
             jatekter[0, 6].Name += "_feher_huszar";
 
             jatekter[0, 2].BackgroundImage = babuk.Images[2];
-            jatekter[0, 2].Name += "_feher_futoa";
+            jatekter[0, 2].Name += "_feher_futo";
             jatekter[0, 5].BackgroundImage = babuk.Images[2];
             jatekter[0, 5].Name += "_feher_futo";
+
+            jatekter[0, 3].BackgroundImage = babuk.Images[4];
+            jatekter[0, 3].Name += "_feher_kiralyno";
+
+            jatekter[0, 4].BackgroundImage = babuk.Images[3];
+            jatekter[0, 4].Name += "_feher_kiraly";
+
+
+            for (int i = 0; i < 8; i++)
+            {
+                jatekter[1, i].BackgroundImage = babuk.Images[5];
+                jatekter[1, i].Name += "_feher_paraszt";
+            }
+
+
+            //FEKETE BÁBÚK
+            jatekter[7, 0].BackgroundImage = babuk.Images[6];
+            jatekter[7, 0].Name += "_fekete_bastya";
+            jatekter[7, 7].BackgroundImage = babuk.Images[6];
+            jatekter[7, 7].Name += "_fekete_bastya";
+
+            jatekter[7, 1].BackgroundImage = babuk.Images[7];
+            jatekter[7, 1].Name += "_fekete_huszar";
+            jatekter[7, 6].BackgroundImage = babuk.Images[7];
+            jatekter[7, 6].Name += "_fekete_huszar";
+
+            jatekter[7, 2].BackgroundImage = babuk.Images[8];
+            jatekter[7, 2].Name += "_fekete_futo";
+            jatekter[7, 5].BackgroundImage = babuk.Images[8];
+            jatekter[7, 5].Name += "_fekete_futo";
+
+
+            jatekter[7, 3].BackgroundImage = babuk.Images[10];
+            jatekter[7, 3].Name += "_fekete_kiralyno";
+
+            jatekter[7, 4].BackgroundImage = babuk.Images[9];
+            jatekter[7, 4].Name += "_fekete_kiraly";
+
+            for (int i = 0; i < 8; i++)
+            {
+                jatekter[6, i].BackgroundImage = babuk.Images[11];
+                jatekter[6, i].Name += "_feher_paraszt";
+            }
         }
 
         private void mozgatasClick(object sender, EventArgs e)
