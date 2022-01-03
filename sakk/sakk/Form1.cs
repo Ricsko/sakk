@@ -17,6 +17,8 @@ namespace sakk
 
         static PictureBox[,] jatekter = new PictureBox[8, 8];
         static PictureBox aktBabu = new PictureBox();
+        static List<string> babukfeher = new List<string>();
+        static List<string> babukfekete = new List<string>();
 
         public Form1()
         {
@@ -103,49 +105,61 @@ namespace sakk
             //FEHÉR BÁBÚK
 
             jatekter[0, 0].BackgroundImage = babuk.Images[0];
-            jatekter[0, 0].Name += "_feher_bastya";
+            jatekter[0, 0].Name += "_feher_bastya1";
+            babukfeher.Add(jatekter[0, 0].Name.Split('_')[3]);
+
             jatekter[0, 7].BackgroundImage = babuk.Images[0];
-            jatekter[0, 7].Name += "_feher_bastya";
+            jatekter[0, 7].Name += "_feher_bastya2";
+            babukfeher.Add(jatekter[0, 7].Name.Split('_')[3]);
 
             jatekter[0, 1].BackgroundImage = babuk.Images[1];
-            jatekter[0, 1].Name += "_feher_huszar";
+            jatekter[0, 1].Name += "_feher_huszar1";
+            babukfeher.Add(jatekter[0, 1].Name.Split('_')[3]);
+
             jatekter[0, 6].BackgroundImage = babuk.Images[1];
-            jatekter[0, 6].Name += "_feher_huszar";
+            jatekter[0, 6].Name += "_feher_huszar2";
+            babukfeher.Add(jatekter[0, 6].Name.Split('_')[3]);
 
             jatekter[0, 2].BackgroundImage = babuk.Images[2];
-            jatekter[0, 2].Name += "_feher_futo";
+            jatekter[0, 2].Name += "_feher_futo1";
+            babukfeher.Add(jatekter[0, 2].Name.Split('_')[3]);
+
             jatekter[0, 5].BackgroundImage = babuk.Images[2];
-            jatekter[0, 5].Name += "_feher_futo";
+            jatekter[0, 5].Name += "_feher_futo2";
+            babukfeher.Add(jatekter[0, 5].Name.Split('_')[3]);
 
             jatekter[0, 3].BackgroundImage = babuk.Images[4];
             jatekter[0, 3].Name += "_feher_kiralyno";
+            babukfeher.Add(jatekter[0, 3].Name.Split('_')[3]);
 
             jatekter[0, 4].BackgroundImage = babuk.Images[3];
             jatekter[0, 4].Name += "_feher_kiraly";
+            babukfeher.Add(jatekter[0, 4].Name.Split('_')[3]);
 
 
             for (int i = 0; i < 8; i++)
             {
                 jatekter[1, i].BackgroundImage = babuk.Images[5];
-                jatekter[1, i].Name += "_feher_paraszt";
+                jatekter[1, i].Name += $"_feher_paraszt{i}";
+                babukfeher.Add(jatekter[1, i].Name.Split('_')[3]);
             }
 
 
             //FEKETE BÁBÚK
             jatekter[7, 0].BackgroundImage = babuk.Images[6];
-            jatekter[7, 0].Name += "_fekete_bastya";
+            jatekter[7, 0].Name += "_fekete_bastya1";
             jatekter[7, 7].BackgroundImage = babuk.Images[6];
-            jatekter[7, 7].Name += "_fekete_bastya";
+            jatekter[7, 7].Name += "_fekete_bastya2";
 
             jatekter[7, 1].BackgroundImage = babuk.Images[7];
-            jatekter[7, 1].Name += "_fekete_huszar";
+            jatekter[7, 1].Name += "_fekete_huszar1";
             jatekter[7, 6].BackgroundImage = babuk.Images[7];
-            jatekter[7, 6].Name += "_fekete_huszar";
+            jatekter[7, 6].Name += "_fekete_huszar2";
 
             jatekter[7, 2].BackgroundImage = babuk.Images[8];
-            jatekter[7, 2].Name += "_fekete_futo";
+            jatekter[7, 2].Name += "_fekete_futo1";
             jatekter[7, 5].BackgroundImage = babuk.Images[8];
-            jatekter[7, 5].Name += "_fekete_futo";
+            jatekter[7, 5].Name += "_fekete_futo2";
 
 
             jatekter[7, 3].BackgroundImage = babuk.Images[10];
@@ -157,15 +171,16 @@ namespace sakk
             for (int i = 0; i < 8; i++)
             {
                 jatekter[6, i].BackgroundImage = babuk.Images[11];
-                jatekter[6, i].Name += "_feher_paraszt";
+                jatekter[6, i].Name += "_fekete_paraszt";
             }
+
         }
 
         private void mozgatasClick(object sender, EventArgs e)
         {
-            PictureBox klikkelt = sender as PictureBox;
-            MessageBox.Show(klikkelt.Name);
+            PictureBox klikkelt = sender as PictureBox;            
         }
+
         private void gombeltuntetes()
         {
             jatekos1.Visible = false;
