@@ -63,6 +63,26 @@ namespace sakk.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap feherfeladas {
+            get {
+                object obj = ResourceManager.GetObject("feherfeladas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap feketefeladas {
+            get {
+                object obj = ResourceManager.GetObject("feketefeladas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hatter {
             get {
                 object obj = ResourceManager.GetObject("hatter", resourceCulture);

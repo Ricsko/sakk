@@ -97,8 +97,8 @@ namespace sakk
                 y += 100;
             }
 
-            blcksurrenderBTN.Visible = true;
-            whtsurrenderBTN.Visible = true;
+            pictureBox1.Visible = true;
+            pictureBox2.Visible = true;
 
 
             babuGen();
@@ -207,13 +207,13 @@ namespace sakk
             Application.Restart();
         }
 
-        private void whtsurrenderBTN_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"{jatekos1TBOX.Text} feladta a játékot. A nyertes {jatekos2TBOX.Text}");
             Application.Restart();
         }
 
-        private void blcksurrenderBTN_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"{jatekos2TBOX.Text} feladta a játékot. A nyertes {jatekos1TBOX.Text}");
             Application.Restart();
