@@ -101,6 +101,7 @@ namespace sakk
             pictureBox2.Visible = true;
 
 
+
             babuGen();
         }
 
