@@ -97,6 +97,10 @@ namespace sakk
                 y += 100;
             }
 
+            blcksurrenderBTN.Visible = true;
+            whtsurrenderBTN.Visible = true;
+
+
             babuGen();
         }
 
@@ -200,6 +204,18 @@ namespace sakk
 
         private void újraindításToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Application.Restart();
+        }
+
+        private void whtsurrenderBTN_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"{jatekos1TBOX.Text} feladta a játékot. A nyertes {jatekos2TBOX.Text}");
+            Application.Restart();
+        }
+
+        private void blcksurrenderBTN_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"{jatekos2TBOX.Text} feladta a játékot. A nyertes {jatekos1TBOX.Text}");
             Application.Restart();
         }
     }
