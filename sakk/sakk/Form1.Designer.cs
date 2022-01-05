@@ -43,8 +43,8 @@ namespace sakk
             this.játékToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.újraindításToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kep = new System.Windows.Forms.PictureBox();
-            this.whtsurrenderBTN = new System.Windows.Forms.Button();
-            this.blcksurrenderBTN = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.title)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inditas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jatekos1)).BeginInit();
@@ -52,6 +52,8 @@ namespace sakk
             ((System.ComponentModel.ISupportInitialize)(this.szabalyok)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // jatekos1TBOX
@@ -177,29 +179,31 @@ namespace sakk
             this.kep.TabIndex = 12;
             this.kep.TabStop = false;
             // 
-            // whtsurrenderBTN
+            // pictureBox1
             // 
-            this.whtsurrenderBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.whtsurrenderBTN.Location = new System.Drawing.Point(52, 53);
-            this.whtsurrenderBTN.Name = "whtsurrenderBTN";
-            this.whtsurrenderBTN.Size = new System.Drawing.Size(140, 35);
-            this.whtsurrenderBTN.TabIndex = 13;
-            this.whtsurrenderBTN.Text = "Feladás fehér";
-            this.whtsurrenderBTN.UseVisualStyleBackColor = true;
-            this.whtsurrenderBTN.Visible = false;
-            this.whtsurrenderBTN.Click += new System.EventHandler(this.whtsurrenderBTN_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::sakk.Properties.Resources.feherfeladas;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(52, 60);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 35);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // blcksurrenderBTN
+            // pictureBox2
             // 
-            this.blcksurrenderBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.blcksurrenderBTN.Location = new System.Drawing.Point(52, 101);
-            this.blcksurrenderBTN.Name = "blcksurrenderBTN";
-            this.blcksurrenderBTN.Size = new System.Drawing.Size(140, 35);
-            this.blcksurrenderBTN.TabIndex = 14;
-            this.blcksurrenderBTN.Text = "Feladás fekete";
-            this.blcksurrenderBTN.UseVisualStyleBackColor = true;
-            this.blcksurrenderBTN.Visible = false;
-            this.blcksurrenderBTN.Click += new System.EventHandler(this.blcksurrenderBTN_Click);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::sakk.Properties.Resources.feketefeladas;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(52, 101);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 35);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Form1
             // 
@@ -208,8 +212,8 @@ namespace sakk
             this.BackgroundImage = global::sakk.Properties.Resources.hatter;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.blcksurrenderBTN);
-            this.Controls.Add(this.whtsurrenderBTN);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.kep);
             this.Controls.Add(this.szabalyok);
             this.Controls.Add(this.jatekos2);
@@ -231,6 +235,8 @@ namespace sakk
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,8 +256,8 @@ namespace sakk
         private System.Windows.Forms.ToolStripMenuItem játékToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem újraindításToolStripMenuItem;
         private System.Windows.Forms.PictureBox kep;
-        private System.Windows.Forms.Button whtsurrenderBTN;
-        private System.Windows.Forms.Button blcksurrenderBTN;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
