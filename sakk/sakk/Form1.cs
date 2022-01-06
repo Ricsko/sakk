@@ -277,7 +277,6 @@ namespace sakk
             {
                 jatekter[sor + segedSzorz, oszl].BackColor = Color.Violet;
             }
-            
         }
 
         private void gombeltuntetes()
