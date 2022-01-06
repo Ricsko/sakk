@@ -43,8 +43,8 @@ namespace sakk
             this.játékToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.újraindításToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kep = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.whtsurrenderBTN = new System.Windows.Forms.PictureBox();
+            this.blcksurrenderBTN = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.title)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inditas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jatekos1)).BeginInit();
@@ -52,8 +52,8 @@ namespace sakk
             ((System.ComponentModel.ISupportInitialize)(this.szabalyok)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kep)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.whtsurrenderBTN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blcksurrenderBTN)).BeginInit();
             this.SuspendLayout();
             // 
             // jatekos1TBOX
@@ -179,31 +179,31 @@ namespace sakk
             this.kep.TabIndex = 12;
             this.kep.TabStop = false;
             // 
-            // pictureBox1
+            // whtsurrenderBTN
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::sakk.Properties.Resources.feherfeladas;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(52, 60);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 35);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.whtsurrenderBTN.BackColor = System.Drawing.Color.Transparent;
+            this.whtsurrenderBTN.BackgroundImage = global::sakk.Properties.Resources.feherfeladas;
+            this.whtsurrenderBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.whtsurrenderBTN.Location = new System.Drawing.Point(52, 60);
+            this.whtsurrenderBTN.Name = "whtsurrenderBTN";
+            this.whtsurrenderBTN.Size = new System.Drawing.Size(140, 35);
+            this.whtsurrenderBTN.TabIndex = 15;
+            this.whtsurrenderBTN.TabStop = false;
+            this.whtsurrenderBTN.Visible = false;
+            this.whtsurrenderBTN.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
+            // blcksurrenderBTN
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::sakk.Properties.Resources.feketefeladas;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(52, 101);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(140, 35);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.blcksurrenderBTN.BackColor = System.Drawing.Color.Transparent;
+            this.blcksurrenderBTN.BackgroundImage = global::sakk.Properties.Resources.feketefeladas;
+            this.blcksurrenderBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.blcksurrenderBTN.Location = new System.Drawing.Point(52, 101);
+            this.blcksurrenderBTN.Name = "blcksurrenderBTN";
+            this.blcksurrenderBTN.Size = new System.Drawing.Size(140, 35);
+            this.blcksurrenderBTN.TabIndex = 16;
+            this.blcksurrenderBTN.TabStop = false;
+            this.blcksurrenderBTN.Visible = false;
+            this.blcksurrenderBTN.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Form1
             // 
@@ -212,8 +212,8 @@ namespace sakk
             this.BackgroundImage = global::sakk.Properties.Resources.hatter;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.blcksurrenderBTN);
+            this.Controls.Add(this.whtsurrenderBTN);
             this.Controls.Add(this.kep);
             this.Controls.Add(this.szabalyok);
             this.Controls.Add(this.jatekos2);
@@ -235,8 +235,8 @@ namespace sakk
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kep)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.whtsurrenderBTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blcksurrenderBTN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,8 +256,8 @@ namespace sakk
         private System.Windows.Forms.ToolStripMenuItem játékToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem újraindításToolStripMenuItem;
         private System.Windows.Forms.PictureBox kep;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox whtsurrenderBTN;
+        private System.Windows.Forms.PictureBox blcksurrenderBTN;
     }
 }
 

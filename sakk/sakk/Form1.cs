@@ -97,8 +97,8 @@ namespace sakk
                 y += 100;
             }
 
-            pictureBox1.Visible = true;
-            pictureBox2.Visible = true;
+            whtsurrenderBTN.Visible = true;
+            blcksurrenderBTN.Visible = true;
 
 
             babuGen();
