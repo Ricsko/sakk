@@ -182,7 +182,7 @@ namespace sakk
             // whtsurrenderBTN
             // 
             this.whtsurrenderBTN.BackColor = System.Drawing.Color.Transparent;
-            this.whtsurrenderBTN.BackgroundImage = global::sakk.Properties.Resources.feherfeladas;
+            this.whtsurrenderBTN.BackgroundImage = global::sakk.Properties.Resources.feladasfeherfifazgattal;
             this.whtsurrenderBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.whtsurrenderBTN.Location = new System.Drawing.Point(52, 60);
             this.whtsurrenderBTN.Name = "whtsurrenderBTN";
