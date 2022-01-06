@@ -124,11 +124,11 @@
   <data name="feherfeladas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\feherfeladas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="feladasfeherfifazgattal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\feladasfeherfifazgattal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hatter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\hatter.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TITLE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\TITLE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="JATEKOS2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\JATEKOS2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,16 +136,19 @@
   <data name="SZABALYOK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\SZABALYOK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="JATEKOS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\JATEKOS1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nemtom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\nemtom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="JATEKOS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\JATEKOS1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TITLE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\TITLE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="inditas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\inditas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="feladasfeherfifazgattal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\feladasfeherfifazgattal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="credits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\credits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
