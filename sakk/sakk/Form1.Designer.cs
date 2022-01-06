@@ -43,6 +43,9 @@ namespace sakk
             this.játékToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.újraindításToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kep = new System.Windows.Forms.PictureBox();
+            this.whtsurrenderBTN = new System.Windows.Forms.PictureBox();
+            this.blcksurrenderBTN = new System.Windows.Forms.PictureBox();
+            this.credits = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.title)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inditas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jatekos1)).BeginInit();
@@ -50,6 +53,9 @@ namespace sakk
             ((System.ComponentModel.ISupportInitialize)(this.szabalyok)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.whtsurrenderBTN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blcksurrenderBTN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.credits)).BeginInit();
             this.SuspendLayout();
             // 
             // jatekos1TBOX
@@ -175,6 +181,42 @@ namespace sakk
             this.kep.TabIndex = 12;
             this.kep.TabStop = false;
             // 
+            // whtsurrenderBTN
+            // 
+            this.whtsurrenderBTN.BackColor = System.Drawing.Color.Transparent;
+            this.whtsurrenderBTN.BackgroundImage = global::sakk.Properties.Resources.feladasfeherfifazgattal;
+            this.whtsurrenderBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.whtsurrenderBTN.Location = new System.Drawing.Point(52, 60);
+            this.whtsurrenderBTN.Name = "whtsurrenderBTN";
+            this.whtsurrenderBTN.Size = new System.Drawing.Size(140, 35);
+            this.whtsurrenderBTN.TabIndex = 15;
+            this.whtsurrenderBTN.TabStop = false;
+            this.whtsurrenderBTN.Visible = false;
+            this.whtsurrenderBTN.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // blcksurrenderBTN
+            // 
+            this.blcksurrenderBTN.BackColor = System.Drawing.Color.Transparent;
+            this.blcksurrenderBTN.BackgroundImage = global::sakk.Properties.Resources.feketefeladas;
+            this.blcksurrenderBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.blcksurrenderBTN.Location = new System.Drawing.Point(52, 101);
+            this.blcksurrenderBTN.Name = "blcksurrenderBTN";
+            this.blcksurrenderBTN.Size = new System.Drawing.Size(140, 35);
+            this.blcksurrenderBTN.TabIndex = 16;
+            this.blcksurrenderBTN.TabStop = false;
+            this.blcksurrenderBTN.Visible = false;
+            this.blcksurrenderBTN.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // credits
+            // 
+            this.credits.BackColor = System.Drawing.Color.Transparent;
+            this.credits.BackgroundImage = global::sakk.Properties.Resources.credits;
+            this.credits.Location = new System.Drawing.Point(12, 366);
+            this.credits.Name = "credits";
+            this.credits.Size = new System.Drawing.Size(159, 119);
+            this.credits.TabIndex = 17;
+            this.credits.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +224,9 @@ namespace sakk
             this.BackgroundImage = global::sakk.Properties.Resources.hatter;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.credits);
+            this.Controls.Add(this.blcksurrenderBTN);
+            this.Controls.Add(this.whtsurrenderBTN);
             this.Controls.Add(this.kep);
             this.Controls.Add(this.szabalyok);
             this.Controls.Add(this.jatekos2);
@@ -203,6 +248,9 @@ namespace sakk
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.whtsurrenderBTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blcksurrenderBTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.credits)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,6 +270,9 @@ namespace sakk
         private System.Windows.Forms.ToolStripMenuItem játékToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem újraindításToolStripMenuItem;
         private System.Windows.Forms.PictureBox kep;
+        private System.Windows.Forms.PictureBox whtsurrenderBTN;
+        private System.Windows.Forms.PictureBox blcksurrenderBTN;
+        private System.Windows.Forms.PictureBox credits;
     }
 }
 
