@@ -19,6 +19,7 @@ namespace sakk
         static PictureBox aktBabu = new PictureBox();
         static List<string> babukfeher = new List<string>();
         static List<string> babukfekete = new List<string>();
+        static int aktSzin = 0;
 
         public Form1()
         {
@@ -105,80 +106,173 @@ namespace sakk
             //FEHÉR BÁBÚK
 
             jatekter[0, 0].BackgroundImage = babuk.Images[0];
-            jatekter[0, 0].Name += "_feher_bastya1";
+            jatekter[0, 0].Name += "_0_bastya";
             babukfeher.Add(jatekter[0, 0].Name.Split('_')[3]);
 
             jatekter[0, 7].BackgroundImage = babuk.Images[0];
-            jatekter[0, 7].Name += "_feher_bastya2";
+            jatekter[0, 7].Name += "_0_bastya";
             babukfeher.Add(jatekter[0, 7].Name.Split('_')[3]);
 
             jatekter[0, 1].BackgroundImage = babuk.Images[1];
-            jatekter[0, 1].Name += "_feher_huszar1";
+            jatekter[0, 1].Name += "_0_huszar";
             babukfeher.Add(jatekter[0, 1].Name.Split('_')[3]);
 
             jatekter[0, 6].BackgroundImage = babuk.Images[1];
-            jatekter[0, 6].Name += "_feher_huszar2";
+            jatekter[0, 6].Name += "_0_huszar";
             babukfeher.Add(jatekter[0, 6].Name.Split('_')[3]);
 
             jatekter[0, 2].BackgroundImage = babuk.Images[2];
-            jatekter[0, 2].Name += "_feher_futo1";
+            jatekter[0, 2].Name += "_0_futo";
             babukfeher.Add(jatekter[0, 2].Name.Split('_')[3]);
 
             jatekter[0, 5].BackgroundImage = babuk.Images[2];
-            jatekter[0, 5].Name += "_feher_futo2";
+            jatekter[0, 5].Name += "_0_futo";
             babukfeher.Add(jatekter[0, 5].Name.Split('_')[3]);
 
             jatekter[0, 3].BackgroundImage = babuk.Images[4];
-            jatekter[0, 3].Name += "_feher_kiralyno";
+            jatekter[0, 3].Name += "_0_kiralyno";
             babukfeher.Add(jatekter[0, 3].Name.Split('_')[3]);
 
             jatekter[0, 4].BackgroundImage = babuk.Images[3];
-            jatekter[0, 4].Name += "_feher_kiraly";
+            jatekter[0, 4].Name += "_0_kiraly";
             babukfeher.Add(jatekter[0, 4].Name.Split('_')[3]);
 
 
             for (int i = 0; i < 8; i++)
             {
                 jatekter[1, i].BackgroundImage = babuk.Images[5];
-                jatekter[1, i].Name += $"_feher_paraszt{i}";
+                jatekter[1, i].Name += $"_0_paraszt";
                 babukfeher.Add(jatekter[1, i].Name.Split('_')[3]);
             }
 
 
             //FEKETE BÁBÚK
             jatekter[7, 0].BackgroundImage = babuk.Images[6];
-            jatekter[7, 0].Name += "_fekete_bastya1";
+            jatekter[7, 0].Name += "_1_bastya";
+            babukfekete.Add(jatekter[7, 0].Name.Split('_')[3]);
+
             jatekter[7, 7].BackgroundImage = babuk.Images[6];
-            jatekter[7, 7].Name += "_fekete_bastya2";
+            jatekter[7, 7].Name += "_1_bastya";
+            babukfekete.Add(jatekter[7, 7].Name.Split('_')[3]);
 
             jatekter[7, 1].BackgroundImage = babuk.Images[7];
-            jatekter[7, 1].Name += "_fekete_huszar1";
+            jatekter[7, 1].Name += "_1_huszar";
+            babukfekete.Add(jatekter[7, 1].Name.Split('_')[3]);
+
             jatekter[7, 6].BackgroundImage = babuk.Images[7];
-            jatekter[7, 6].Name += "_fekete_huszar2";
+            jatekter[7, 6].Name += "_1_huszar";
+            babukfekete.Add(jatekter[7, 6].Name.Split('_')[3]);
 
             jatekter[7, 2].BackgroundImage = babuk.Images[8];
-            jatekter[7, 2].Name += "_fekete_futo1";
-            jatekter[7, 5].BackgroundImage = babuk.Images[8];
-            jatekter[7, 5].Name += "_fekete_futo2";
+            jatekter[7, 2].Name += "_1_futo";
+            babukfekete.Add(jatekter[7, 2].Name.Split('_')[3]);
 
+            jatekter[7, 5].BackgroundImage = babuk.Images[8];
+            jatekter[7, 5].Name += "_1_futo";
+            babukfekete.Add(jatekter[7, 5].Name.Split('_')[3]);
 
             jatekter[7, 3].BackgroundImage = babuk.Images[10];
-            jatekter[7, 3].Name += "_fekete_kiralyno";
+            jatekter[7, 3].Name += "_1_kiralyno";
+            babukfekete.Add(jatekter[7, 3].Name.Split('_')[3]);
 
             jatekter[7, 4].BackgroundImage = babuk.Images[9];
-            jatekter[7, 4].Name += "_fekete_kiraly";
+            jatekter[7, 4].Name += "_1_kiraly";
+            babukfekete.Add(jatekter[7, 4].Name.Split('_')[3]);
 
             for (int i = 0; i < 8; i++)
             {
                 jatekter[6, i].BackgroundImage = babuk.Images[11];
-                jatekter[6, i].Name += "_fekete_paraszt";
+                jatekter[6, i].Name += $"_1_paraszt";
+                babukfekete.Add(jatekter[6, i].Name.Split('_')[3]);
             }
-
         }
 
         private void mozgatasClick(object sender, EventArgs e)
         {
-            PictureBox klikkelt = sender as PictureBox;            
+            PictureBox klikkelt = sender as PictureBox;
+            string babuTipus = "";
+            int babuSzin = -1;
+
+            if (klikkelt.BackgroundImage != null)
+            {
+                babuTipus = klikkelt.Name.Split('_')[3];
+                babuSzin = Convert.ToInt32(klikkelt.Name.Split('_')[2]);
+            }
+
+            switch (babuTipus)
+            {
+                case "paraszt":
+                    lepesParaszt(klikkelt);
+                    break;
+
+                case "bastya":
+                    lepesBastya(klikkelt);
+                    break;
+            }
+
+            if (klikkelt.BackColor == Color.Violet && aktBabu.BackgroundImage != null)
+            {
+                klikkelt.BackgroundImage = aktBabu.BackgroundImage;
+                klikkelt.Name += $"_{aktBabu.Name.Split('_')[2]}_{aktBabu.Name.Split('_')[3]}";
+                jatekter[Convert.ToInt32(aktBabu.Name.Split('_')[0]), Convert.ToInt32(aktBabu.Name.Split('_')[1])].BackgroundImage = null;
+                jatekter[Convert.ToInt32(aktBabu.Name.Split('_')[0]), Convert.ToInt32(aktBabu.Name.Split('_')[1])].Name = $"{aktBabu.Name.Split('_')[0]}_{aktBabu.Name.Split('_')[1]}";
+
+                if ((Convert.ToInt32(klikkelt.Name.Split('_')[0]) + Convert.ToInt32(klikkelt.Name.Split('_')[1])) % 2 == 0)
+                {
+                    jatekter[Convert.ToInt32(klikkelt.Name.Split('_')[0]), Convert.ToInt32(klikkelt.Name.Split('_')[1])].BackColor = Color.Purple;
+                }
+                else
+                {
+                    jatekter[Convert.ToInt32(klikkelt.Name.Split('_')[0]), Convert.ToInt32(klikkelt.Name.Split('_')[1])].BackColor = Color.Pink;
+                }
+
+                aktSzin++;
+            }
+
+            MessageBox.Show(klikkelt.Name);
+        }
+
+        private void lepesBastya(PictureBox klikkelt)
+        {
+            aktBabu.Name = klikkelt.Name;
+            aktBabu.BackgroundImage = klikkelt.BackgroundImage;
+
+            int sor = Convert.ToInt32(aktBabu.Name.Split('_')[0]);
+            int oszl = Convert.ToInt32(aktBabu.Name.Split('_')[1]);
+            int babuSzin = Convert.ToInt32(aktBabu.Name.Split('_')[2]);
+            
+            
+        }
+
+        private void lepesParaszt(PictureBox klikkelt)
+        {
+            aktBabu.Name = klikkelt.Name;
+            aktBabu.BackgroundImage = klikkelt.BackgroundImage;
+
+            int sor = Convert.ToInt32(aktBabu.Name.Split('_')[0]);
+            int oszl = Convert.ToInt32(aktBabu.Name.Split('_')[1]);
+            int babuSzin = Convert.ToInt32(aktBabu.Name.Split('_')[2]);
+            int segedSzorz = 1;
+
+            if (babuSzin == 1)
+            {
+                segedSzorz = -segedSzorz;
+            }
+            else
+            {
+                segedSzorz = 1;
+            }
+
+            if(jatekter[sor + segedSzorz, oszl].BackgroundImage != null)
+            {
+                MessageBox.Show("A kiválaztott bábu nem képes a lépésre!");
+                aktBabu.BackgroundImage = null;
+                aktBabu.Name = "";
+            }
+            else
+            {
+                jatekter[sor + segedSzorz, oszl].BackColor = Color.Violet;
+            }
         }
 
         private void gombeltuntetes()
